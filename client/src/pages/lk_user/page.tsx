@@ -1,10 +1,25 @@
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import "./lkUser.css";
 import {Context} from '../../main'
 import { observer } from "mobx-react-lite";
+import axios from "axios";
+import { IUser } from "../../models/IUser";
 
 const LkUser = () => {
+  const [user, setUser] = useState<IUser[]>([]);
+  const query = new URLSearchParams(location.search);
+  const profile = query.get("email")
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/users")
+      .then((response) => {
+        setUser(response.data);
+      })
+      .catch((e) => {
+        return e;
+      });
+  }, []);
   const { store } = useContext(Context)
   return (
     <main className="LkUser">

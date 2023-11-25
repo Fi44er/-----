@@ -5,7 +5,7 @@ import { NewResponse } from "../models/response/NewResponse"
 
 export default class NewsService {
     static fetchNews(): Promise<AxiosResponse<INews[]>> {
-        return $api.get<INews[]>('/users')
+        return $api.get<INews[]>('/news')
     }
 
     static async addNew(img: string, heading: string, text: string): Promise<AxiosResponse<NewResponse>> {

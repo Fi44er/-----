@@ -15,11 +15,12 @@ router.post('/registration',
 router.post('/login', UserController.login)
 router.post('/logout', UserController.logout)
 router.get('/refresh', UserController.refresh)
-router.get('/users', middlewaresAuth, UserController.getUsers)
+router.get('/users', UserController.getUsers)
 
 // municipal
 router.post('/regMunicipalServices', UserController.regMunicipalServices)
 router.post('/loginMunicipalServices', UserController.loginMunicipalServices)
+router.get('/getMunicipal', UserController.getMunicipal)
 
 // news
 router.get('/news', NewsController.getNews)

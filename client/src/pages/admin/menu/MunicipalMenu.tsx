@@ -1,7 +1,20 @@
 import style from "../Admin.module.scss";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { IMunicipal } from "../../../models/IMunicipal";
 
 const MunicipalMenu = () => {
+    const [municipal, setmunicipal] = useState<IMunicipal[]>([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/getMunicipal")
+      .then((response) => {
+        setmunicipal(response.data);
+      })
+      .catch((e) => {
+        return e;
+      });
+  }, []);
   return (
     <>
       <div>
@@ -21,14 +34,16 @@ const MunicipalMenu = () => {
               </tr>
             </thead>
             <tbody>
+            {municipal.map((municipalId) => (
               <tr>
-                <td>1</td>
-                <td>Name</td>
-                <td>name@name.ru</td>
-                <td>Вода</td>
+                <td>{municipalId.id}</td>
+                <td>{municipalId.name}</td>
+                <td>{municipalId.email}</td>
+                <td>{municipalId.specification}</td>
                 <td><a href="#">Редактировать</a></td>
                 <td><a href="#">Удалить</a></td>
               </tr>
+            ))}
             </tbody>
           </table>
         </div>

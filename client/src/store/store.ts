@@ -4,8 +4,11 @@ import AuthServices from "../services/AuthService"
 import axios from "axios"
 import { AuthResponse } from "../models/response/AuthResponse"
 import { API_URL } from "../http"
+import { IMunicipal } from "../models/IMunicipal"
+import MunicipalService from "../services/MunicipalService"
 
 export default class Store {
+  municipal = {} as IMunicipal
   user = {} as IUser
   isAuth = false
   isLoading = false
@@ -20,6 +23,10 @@ export default class Store {
 
   setUser(user: IUser) {
     this.user = user
+  }
+
+  setMunicipal(municipal: IMunicipal) {
+    this.municipal = municipal
   }
 
   setMessage(message: string) {
@@ -88,6 +95,33 @@ export default class Store {
       this.setUser(response.data.user)
     } catch (e: any) {
       console.log(e.response?.data?.message)
+    }
+  }
+
+  async regMunicipalServices(
+    cod: string,
+    name: string,
+    specification: string,
+    work_area: string,
+    email: string,
+    password: string
+  ) {
+    try {
+      const response = await MunicipalService.regMunicipalServices(
+        cod,
+        name,
+        specification,
+        work_area,
+        email,
+        password
+      )
+      console.log(response)
+      localStorage.setItem("token", response.data.accessToken)
+      this.setAuth(true)
+      this.setMunicipal(response.data.municipal)
+    } catch (e: any) {
+      // console.log(e.response?.data?.message)
+      this.setMessage(e.response?.data?.message)
     }
   }
 
