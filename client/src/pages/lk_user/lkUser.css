@@ -1,0 +1,177 @@
+.LkUser {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  padding: 0 10rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.LkUserContent {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 25.7rem;
+}
+.userProfileHeading {
+  margin-bottom: 8.5rem;
+}
+.userProfileHeading h2 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #004e8f;
+}
+.userProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userProfileImg {
+  width: 50.8rem;
+  height: 50.8rem;
+}
+.userProfileImg {
+  display: flex;
+  flex-direction: column;
+}
+.inputFile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28.1rem;
+  height: 9rem;
+  border-radius: 2rem;
+  background-color: #023affcc;
+  margin-top: 5.7rem;
+  color: #fff;
+  font-size: 3.4rem;
+}
+.inputFile input {
+  display: none;
+}
+.userProfileInfo {
+  padding-top: 7rem;
+}
+.userProfileInfoItems {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  grid-gap: 3rem;
+}
+.userProfileInfoItems h2 {
+  font-size: 2.6rem;
+  font-weight: normal;
+  color: #004e8f;
+  padding-bottom: 1.2rem;
+}
+.userProfileInfoItemBlock {
+  width: 75.7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 2rem;
+  border: 0.3rem solid #023aff;
+  border-radius: 2rem;
+}
+.userProfileInfoItemBlock p {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #004e8f;
+}
+.userProfileInfoItemBlock1 {
+  width: 75.7rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 0.3rem solid #023aff;
+  border-radius: 2rem;
+}
+.userProfileInfoItemBlock1 a {
+  font-size: 3.8rem;
+  font-weight: normal;
+  text-align: center;
+}
+.im2 {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .LkUserContent {
+    flex-direction: column;
+    grid-gap: 5rem;
+  }
+  .userProfileInfoItemBlock {
+    width: 45.7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2rem;
+    border: 0.3rem solid #023aff;
+    border-radius: 2rem;
+  }
+  .userProfileInfoItemBlock1 {
+    width: 45.7rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 0.3rem solid #023aff;
+    border-radius: 2rem;
+  }
+  .userProfileInfoItemBlock1 a {
+    font-size: 2.8rem;
+    font-weight: normal;
+    text-align: center;
+  }
+  .userProfile {
+    align-items: baseline;
+  }
+  .im2 {
+    display: none;
+  }
+  .im1 {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .im2 {
+    display: block;
+  }
+  .im1 {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .userProfileInfoItemBlock {
+    width: 40.7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2rem;
+    border: 0.3rem solid #023aff;
+    border-radius: 2rem;
+  }
+  .userProfileInfoItemBlock1 {
+    width: 40.7rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 0.3rem solid #023aff;
+    border-radius: 2rem;
+  }
+  .userProfileInfoItems {
+    padding-bottom: 2rem;
+  }
+  .userProfileInfo {
+    padding-top: 2rem;
+  }
+}

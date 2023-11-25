@@ -1,0 +1,192 @@
+.news {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 15.2rem;
+}
+.newsSearch {
+  display: flex;
+  justify-content: center;
+}
+.newsSearch input {
+  width: 108rem;
+  height: 7.9rem;
+  padding: 2.5rem 8rem;
+  background-color: none;
+  border: 0.1rem solid #004e8f;
+  font-size: 1.8rem;
+  font-weight: light;
+  border-radius: 1rem;
+  outline: 0;
+}
+.newsFilters {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.newsFiltersContent {
+  width: 44.4rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.newsFilter {
+  width: 100%;
+  box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+  padding: 2rem 7.4rem;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  grid-gap: 2.5rem;
+}
+.newsFilter h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #004e8f;
+}
+.newsFilterItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2rem;
+}
+.newsFilterItem a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.newsHading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+.newsHading h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #004e8f;
+  padding-bottom: 10rem;
+}
+.newsContentBlock {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.newsContentItems {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 0 12.2rem;
+}
+.newsContentItemText {
+  width: 60rem;
+  height: 40rem;
+  box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+  padding: 2.6rem 5rem;
+  border-radius: 3rem;
+}
+.newsContentItemText h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #004e8f;
+  text-align: center;
+}
+.newsContentItemText p {
+  font-size: 1.6rem;
+  font-weight: medium;
+  color: #004e8f;
+  text-align: left;
+  margin-top: 3.3rem;
+}
+.contentButton {
+  padding-top: 5rem;
+}
+.contentButton a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #023affcc;
+  width: 21rem;
+  height: 5rem;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+@media (max-width: 1025px) {
+  .newsContentItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsContentItemText {
+    width: 30rem;
+    height: 40rem;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    padding: 2.6rem 5rem;
+    border-radius: 3rem;
+  }
+  .newsContentItemText h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #004e8f;
+    text-align: center;
+  }
+  .newsContentItemText p {
+    font-size: 1.2rem;
+    font-weight: medium;
+    color: #004e8f;
+    text-align: left;
+    margin-top: 3.3rem;
+  }
+}
+@media (max-width: 500px) {
+  .newsSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .newsSearch input {
+    width: 22rem;
+    height: 5.5rem;
+    padding: 1.5rem 2rem;
+    background-color: none;
+    border: 0.1rem solid #004e8f;
+    font-size: 1.4rem;
+    font-weight: light;
+    border-radius: 1rem;
+  }
+  /* .newsFiltersContent {
+    width: 54rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+  }
+  .newsFilter {
+    width: 100%;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    padding: 2rem 3.7rem;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    grid-gap: 1.5rem;
+  }
+  .newsFilterItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  } */
+}
