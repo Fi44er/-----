@@ -28,6 +28,10 @@ const LkUser = () => {
   }, []);
   const { store } = useContext(Context)
   
+  if (!localStorage.getItem("token")) {
+    location.href = '/'
+    return
+  }
 
   // var cityId = user.find(val => val.email === profile).id; 
   // const profile = user.find(val => val.email === profileMail)
