@@ -87,7 +87,7 @@ const LkUser = () => {
               <div className="userProfileInfoItem">
                 <h2>Адрес</h2>
                 <div className="userProfileInfoItemBlock">
-                  <p>{user.email}</p>
+                  <p>{user.address}</p>
                 </div>
               </div>
               <div className="userProfileInfoItemLink">

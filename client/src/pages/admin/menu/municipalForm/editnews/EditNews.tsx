@@ -22,8 +22,8 @@ export default function EditNews() {
                   <input
                     type="text"
                     placeholder="Заголовок"
-                    onChange={(e) => setFio(e.target.value)}
-                    value={fio}
+                    onChange={(e) => setHeading(e.target.value)}
+                    value={heading}
                   />
                 </div>
                 <div className="input2">
