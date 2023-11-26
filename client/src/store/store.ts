@@ -80,6 +80,7 @@ export default class Store {
       localStorage.removeItem("token")
       this.setAuth(false)
       this.setUser({} as IUser)
+      location.href='/'
     } catch (e: any) {
       console.log(e.response?.data?.message)
     }
