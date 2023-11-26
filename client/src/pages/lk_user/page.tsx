@@ -26,7 +26,16 @@ const LkUser = () => {
         return e;
       });
   }, []);
+<<<<<<< HEAD
   const { store } = useContext(Context);
+=======
+  const { store } = useContext(Context)
+  
+  if (!localStorage.getItem("token")) {
+    location.href = '/'
+    return
+  }
+>>>>>>> e92f51248921d465e013988819f1c7a5c60c9846
 
   // var cityId = user.find(val => val.email === profile).id;
   // const profile = user.find(val => val.email === profileMail)

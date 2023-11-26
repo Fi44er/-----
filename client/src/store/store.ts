@@ -47,7 +47,6 @@ export default class Store {
     } catch (e: any) {
       // console.log(e.response?.data?.message)
       this.setMessage(e.response?.data?.message)
-      throw e
     }
   }
 
