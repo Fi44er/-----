@@ -1,0 +1,233 @@
+.jkx {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5rem;
+}
+.jkxContent {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+.jkxContentItems {
+  display: flex;
+  justify-content: center;
+  grid-gap: 19.6rem;
+}
+.jkxContentHeading {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.jkxContentHeading h1 {
+  font-size: 6.5rem;
+  font-weight: 800;
+  padding-bottom: 1.8rem;
+  color: #004e8f;
+}
+.jkxContentItemText div {
+  width: 90rem;
+  height: 40rem;
+  padding: 2.8rem 2.6rem;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+  color: #004e8f;
+}
+.jkxContentItemText2 div {
+  width: 90rem;
+  height: 40rem;
+  padding: 2.8rem 2.6rem;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+  color: #004e8f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jkxContentItemText div h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 5rem;
+  text-align: left;
+}
+.jkxContentItemText2 div h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 5rem;
+  text-align: left;
+}
+.jkxContentItemText div p {
+  font-size: 3rem;
+  font-weight: normal;
+  text-align: left;
+}
+
+.jkxContentItemImg img {
+  width: 56.8rem;
+  height: 40rem;
+}
+.jkxContentItemImg2 img {
+  width: 56.8rem;
+  height: 40rem;
+}
+.jkxContentItemImg2 {
+  margin-bottom: 5rem;
+}
+.opros {
+  width: 150rem;
+  height: 33rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+  padding: 2.5rem;
+}
+.opros button {
+  margin-top: 1.5rem;
+}
+.opros p {
+  font-size: 5.5rem;
+  font-weight: 600;
+  text-align: left;
+  color: #004e8f;
+}
+@media (max-width: 1024px) {
+  .jkxContentItems {
+    flex-direction: column;
+    grid-gap: 5rem;
+  }
+  .jkxContentItemText div {
+    width: 50rem;
+    height: 38.3rem;
+    padding: 2.8rem 2.6rem;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    color: #004e8f;
+  }
+  .jkxContentItemText2 div {
+    width: 50rem;
+    height: 38.3rem;
+    padding: 2.8rem 2.6rem;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    color: #004e8f;
+  }
+  .opros {
+    width: 45rem;
+  }
+  .opros p {
+    font-size: 3.5rem;
+  }
+  .jkxContentItemText div h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    padding-bottom: 5rem;
+    text-align: left;
+  }
+  .jkxContentItemText2 div h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    padding-bottom: 5rem;
+    text-align: left;
+  }
+  .jkxContentItemText div p {
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: left;
+  }
+  .jkxContentItemImg img {
+    width: 36.8rem;
+    height: 40rem;
+  }
+  .jkxContentItemImg2 img {
+    width: 36.8rem;
+    height: 40rem;
+  }
+  .jkxContentItems {
+    display: flex;
+    grid-gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .jkxContentItemText div {
+    width: 35rem;
+    height: 43.3rem;
+    padding: 2.8rem 2.6rem;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    color: #004e8f;
+  }
+  .jkxContentItemText2 div {
+    width: 35rem;
+    height: 38.3rem;
+    padding: 2.8rem 2.6rem;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    color: #004e8f;
+  }
+  .jkxContentItemImg img {
+    width: 35rem;
+    height: 25rem;
+  }
+  .jkxContentItemImg2 img {
+    width: 35rem;
+    height: 25rem;
+  }
+  .opros {
+    width: 35rem;
+  }
+  .opros p {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .jkxContentItemImg img {
+    width: 25rem;
+    height: 25rem;
+  }
+  .jkxContentItemImg2 img {
+    width: 25rem;
+    height: 25rem;
+  }
+  .jkxContentItemText div {
+    width: 27rem;
+    height: 58.3rem;
+    padding: 2.8rem 2.6rem;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    color: #004e8f;
+  }
+  .jkxContentItemText2 div {
+    width: 27rem;
+    height: 38.3rem;
+    padding: 2.8rem 2.6rem;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 86px -34px rgba(34, 60, 80, 0.2);
+    color: #004e8f;
+  }
+  .opros {
+    width: 25rem;
+  }
+  .opros p {
+    font-size: 2.5rem;
+  }
+}

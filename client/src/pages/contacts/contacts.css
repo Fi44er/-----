@@ -1,0 +1,24 @@
+.contactsButton a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #023affcc;
+  width: 40rem;
+  height: 5rem;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+@media (max-width: 1024px) {
+  .contactsButton a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #023affcc;
+    width: 25rem;
+    height: 10rem;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 1rem;
+  }
+}

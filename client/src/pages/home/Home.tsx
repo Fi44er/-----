@@ -1,11 +1,8 @@
 import { observer } from "mobx-react-lite";
 import styles from "./Home.module.css";
-  
 
 const Home = () => {
-
   return (
-    
     <main className={styles.home}>
       <div className={styles.conatiner}>
         <div className={styles.homeContent}>
@@ -64,7 +61,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <img src="/static/image 15.png" alt="" />
     </main>
   );
 };

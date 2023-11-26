@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export function Header() {
   const [isOpen, setOpen] = useState(false);
-  
+
   return (
     <>
       <header className="header">
@@ -34,13 +34,13 @@ export function Header() {
               <Link to="/">Главная </Link>
             </li>
             <li className="headerNavItem">
-              <Link to="/about_us">Контакты</Link>
+              <Link to="/contacts">Контакты</Link>
             </li>
             <li className="headerNavItem">
-              <Link to="#">О ЖКХ </Link>
+              <Link to="/jkx">О ЖКХ </Link>
             </li>
             <li className="headerNavItem">
-              <Link to="#">Раписание</Link>
+              <Link to="/schedule">Раписание</Link>
             </li>
             <li className="headerNavItem">
               <Link to="/news">Новости</Link>

@@ -13,6 +13,8 @@ import { useContext } from 'react'
 import { Context } from './main'
 import Admin from './pages/admin/Admin'
 import Contacts from './pages/contacts/Contacts'
+import Schedule from './pages/schedule/Schedule'
+import Jkx from './pages/o_jkx/page'
 
 function App() {
 
@@ -32,6 +34,8 @@ function App() {
         <Route path='/news' element={<News />} />
         <Route path='/admin' element={<Admin />} />
         <Route path='/contacts' element={<Contacts />} />
+        <Route path='/schedule' element={<Schedule />} />
+        <Route path='/jkx' element={<Jkx />} />
     </Routes>
     </BrowserRouter>
     </>
