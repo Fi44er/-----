@@ -8,11 +8,11 @@ import { IUser } from "../../models/IUser";
 
 const LkUser = () => {
   const [user, setUser] = useState<IUser[]>([]);
-  const query = new URLSearchParams(location.search);
-  const profile = query.get("email")
+  // const query = new URLSearchParams(location.search);
+  // const profileMail = query.get("email")
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users")
+      .get("http://localhost:5000/api/getUser")
       .then((response) => {
         setUser(response.data);
       })
@@ -21,6 +21,11 @@ const LkUser = () => {
       });
   }, []);
   const { store } = useContext(Context)
+
+  // var cityId = user.find(val => val.email === profile).id; 
+  // const profile = user.find(val => val.email === profileMail)
+  console.log(user);
+  
   return (
     <main className="LkUser">
       <div className="container">

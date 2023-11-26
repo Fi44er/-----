@@ -17,7 +17,7 @@ const Login = () => {
   
   useEffect(() => {
     if(store.isAuth) {
-      navigate(`/lk_user/?email=${email}`)
+      navigate('/lk_user')
     }
   }, [store.isAuth])
 

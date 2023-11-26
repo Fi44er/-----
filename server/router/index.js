@@ -16,6 +16,7 @@ router.post('/login', UserController.login)
 router.post('/logout', UserController.logout)
 router.get('/refresh', UserController.refresh)
 router.get('/users', UserController.getUsers)
+router.get('/getUser', UserController.findUser)
 
 // municipal
 router.post('/regMunicipalServices', UserController.regMunicipalServices)

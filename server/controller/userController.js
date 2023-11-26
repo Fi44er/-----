@@ -78,6 +78,16 @@ class UserController {
     }
   }
 
+  async findUser(req, res, next) {
+    try{
+      const token = req.headers.authorization
+      const user = await userService.infoByToken(token)
+      return res.json(user)
+    }catch (e) {
+      next(e)
+    }
+  }
+
   //MUNICIPAL
 
   async regMunicipalServices(req, res, next) {

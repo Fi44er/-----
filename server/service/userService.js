@@ -79,6 +79,24 @@ class UserService {
         return users[0]
     }
 
+    async infoByToken(token){
+        const connect = await connection
+        const suspect = tokenService.validateAccessToken(token)
+        console.log(suspect);
+        if(suspect === null) {
+            throw ApiError.BadRequest('Некорректный токен')
+        }
+
+        const [rows, fields] = await connect.execute('SELECT * FROM `users` (`email`, `fio`, `phone_number`, `reg_time`) WHERE `email` = ?', [suspect.email]);
+        const user = rows[0]
+
+        if(user === false) {
+            throw ApiError.BadRequest('Пользователя не существует')
+        }
+        return user
+
+    }
+
     //MUNICIPAL
 
     async regMunicipalServices(cod, password, name, specification, work_area, email) {

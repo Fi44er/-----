@@ -12,6 +12,7 @@ import { observer } from 'mobx-react-lite'
 import { useContext } from 'react'
 import { Context } from './main'
 import Admin from './pages/admin/Admin'
+import Contacts from './pages/contacts/Contacts'
 
 function App() {
 
@@ -25,11 +26,12 @@ function App() {
         <Route path='/login' element={<Login />}/>
         <Route path='/reg' element={<Reg />}/>
       <Route path='/' element={<Home />} />
-      <Route path='/' element={<ProtectedRoute authenticated={store.isAuth} />}>
-        <Route path='/lk_user' element={<LkUser />}/>
+      <Route path='/' element={<ProtectedRoute authenticated={store.isAuth} />}> //!localStorage.getItem("token")?false:true
       </Route>
+        <Route path='/lk_user' element={<LkUser />}/>
         <Route path='/news' element={<News />} />
         <Route path='/admin' element={<Admin />} />
+        <Route path='/contacts' element={<Contacts />} />
     </Routes>
     </BrowserRouter>
     </>
