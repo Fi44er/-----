@@ -13,6 +13,7 @@ export default class Store {
   isAuth = false
   isLoading = false
   message = ""
+  regMessage =''
   constructor() {
     makeAutoObservable(this)
   }
@@ -31,6 +32,10 @@ export default class Store {
 
   setMessage(message: string) {
     this.message = message
+  }
+
+  setregMessage(regMessage: string) {
+    this.regMessage = regMessage
   }
 
   setLoading(bool: boolean) {
@@ -54,14 +59,16 @@ export default class Store {
     email: string,
     password: string,
     fio: string,
-    phoneNumber: string
+    phoneNumber: string,
+    address: string
   ) {
     try {
       const response = await AuthServices.registration(
         email,
         password,
         fio,
-        phoneNumber
+        phoneNumber,
+        address
       )
       console.log(response)
       localStorage.setItem("token", response.data.accessToken)
@@ -69,7 +76,7 @@ export default class Store {
       this.setUser(response.data.user)
     } catch (e: any) {
       // console.log(e.response?.data?.message)
-      this.setMessage(e.response?.data?.message)
+      this.setregMessage(e.response?.data?.message)
     }
   }
 

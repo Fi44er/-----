@@ -3,4 +3,5 @@ export interface IUser {
     id: number
     fio: string
     phoneNumber: string
+    address: string
 }
