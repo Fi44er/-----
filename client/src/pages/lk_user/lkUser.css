@@ -29,8 +29,17 @@
   align-items: center;
 }
 .userProfileImg {
-  width: 50.8rem;
-  height: 50.8rem;
+  width: 34rem;
+  height: 34rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 3rem;
+}
+.userProfileImg button {
+  width: 20rem;
+  height: 5rem;
 }
 .userProfileImg {
   display: flex;
@@ -83,7 +92,7 @@
 }
 .userProfileInfoItemBlock1 {
   width: 75.7rem;
-  height: 15rem;
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +101,7 @@
   border-radius: 2rem;
 }
 .userProfileInfoItemBlock1 a {
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   font-weight: normal;
   text-align: center;
 }

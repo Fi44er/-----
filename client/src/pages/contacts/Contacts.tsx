@@ -56,7 +56,7 @@ const Contacts = () => {
             className="w-full mt-44 h-16 bg-blue-800 p-10 text-white rounded-3xl"
             to="http://www.yandexmap.somee.com/"
           >
-            Просмотреть иниерактивную карту
+            Просмотреть карту
           </Link>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import "./lkUser.css";
-import {Context} from '../../main'
+import { Context } from "../../main";
 import { observer } from "mobx-react-lite";
 import axios from "axios";
 import { IUser } from "../../models/IUser";
@@ -13,26 +13,25 @@ const LkUser = () => {
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/getUser", {
-        headers:{
-          Authorization: localStorage.getItem("token")
-        }
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
       })
       .then((response) => {
         console.log(response);
-        
+
         setUser(response.data);
       })
       .catch((e) => {
         return e;
       });
   }, []);
-  const { store } = useContext(Context)
-  
+  const { store } = useContext(Context);
 
-  // var cityId = user.find(val => val.email === profile).id; 
+  // var cityId = user.find(val => val.email === profile).id;
   // const profile = user.find(val => val.email === profileMail)
   // console.log(user);
-  
+
   return (
     <main className="LkUser">
       <div className="container">
@@ -56,8 +55,8 @@ const LkUser = () => {
                 height={358}
                 alt="user_Img"
               />
+              <button onClick={() => store.logout()}>Выйти из акаунта</button>
             </div>
-            <button onClick={() => store.logout()}>Выйти из акаунта</button>
           </div>
           <div className="userProfileInfo">
             <div className="userProfileInfoItems">
@@ -98,6 +97,6 @@ const LkUser = () => {
       </div>
     </main>
   );
-}
+};
 
-export default observer(LkUser)
+export default observer(LkUser);
