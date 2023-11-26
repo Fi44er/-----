@@ -4,10 +4,8 @@ import { useContext, useState } from "react";
 import { observer } from "mobx-react-lite";
 
 export default function EditNews() {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [fio, setFio] = useState<string>("");
-  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [heading, setHeading] = useState<string>("");
+  const [text, setText] = useState<string>("");
   const { store } = useContext(Context);
   return (
     <main className="edit">
