@@ -4,11 +4,11 @@ import { useContext, useState } from "react";
 import { observer } from "mobx-react-lite";
 
 const Reg = () => {
-  const [email, setEmail] = useState<string>("")
-  const [password, setPassword] = useState<string>("")
-  const [fio, setFio] = useState<string>("")
-  const [phoneNumber, setPhoneNumber] = useState<string>("")
-  const { store } = useContext(Context)
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [fio, setFio] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const { store } = useContext(Context);
   return (
     <main className="reg">
       <div className="container">
@@ -30,7 +30,9 @@ const Reg = () => {
             />
             <div className="modalForm">
               <h1>Регистрация</h1>
-              <h1 className="text-red-600 font-extralight text-lg">{store.message}</h1>
+              <h1 className="text-red-600 font-extralight text-lg">
+                {store.message}
+              </h1>
               <div className="modalInput">
                 <div className="input">
                   <img src="/fio.svg" width={29} height={29} alt="" />
@@ -48,6 +50,15 @@ const Reg = () => {
                     placeholder="Телефон"
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     value={phoneNumber}
+                  />
+                </div>
+                <div className="input">
+                  <img src="/fio.svg" width={29} height={29} alt="" />
+                  <input
+                    type="password"
+                    placeholder="Адрес"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
                   />
                 </div>
                 <div className="input">
@@ -70,7 +81,9 @@ const Reg = () => {
                 </div>
                 <button
                   className="formButton"
-                    onClick={() => store.registration(email, password, fio, phoneNumber)}
+                  onClick={() =>
+                    store.registration(email, password, fio, phoneNumber)
+                  }
                 >
                   Зарегистрироваться
                 </button>
@@ -81,6 +94,6 @@ const Reg = () => {
       </div>
     </main>
   );
-}
+};
 
-export default observer(Reg)
+export default observer(Reg);

@@ -79,6 +79,12 @@ const LkUser = () => {
                   <p>{user.email}</p>
                 </div>
               </div>
+              <div className="userProfileInfoItem">
+                <h2>Адрес</h2>
+                <div className="userProfileInfoItemBlock">
+                  <p>{user.email}</p>
+                </div>
+              </div>
               <div className="userProfileInfoItemLink">
                 <div className="userProfileInfoItemBlock1">
                   <Link to="https://web.telegram.org/k/#@ZHKH_online_hakaton_bot">
