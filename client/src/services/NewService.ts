@@ -8,7 +8,7 @@ export default class NewsService {
         return $api.get<INews[]>('/news')
     }
 
-    static async addNew(img: string, heading: string, text: string): Promise<AxiosResponse<NewResponse>> {
-        return $api.post<NewResponse>('/addNews', {img, heading, text})
+    static async addNew(heading: string, text: string): Promise<AxiosResponse<NewResponse>> {
+        return $api.post<NewResponse>('/addnews', {heading, text})
     }
 }

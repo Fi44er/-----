@@ -1,14 +1,24 @@
 import "./reg.css";
 import { Context } from "../../main";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
+import { useNavigate } from "react-router-dom";
 
 const Reg = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [fio, setFio] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
   const { store } = useContext(Context);
+
+  const navigate = useNavigate()
+  
+  useEffect(() => {
+    if(store.isAuth) {
+      navigate('/lk_user')
+    }
+  }, [store.isAuth])
   return (
     <main className="reg">
       <div className="container">
@@ -31,7 +41,7 @@ const Reg = () => {
             <div className="modalForm">
               <h1>Регистрация</h1>
               <h1 className="text-red-600 font-extralight text-lg">
-                {store.message}
+                {store.regMessage}
               </h1>
               <div className="modalInput">
                 <div className="input">
@@ -57,8 +67,8 @@ const Reg = () => {
                   <input
                     type="text"
                     placeholder="Адрес"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    onChange={(e) => setAddress(e.target.value)}
+                    value={address}
                   />
                 </div>
                 <div className="input">
@@ -82,7 +92,7 @@ const Reg = () => {
                 <button
                   className="formButton"
                   onClick={() =>
-                    store.registration(email, password, fio, phoneNumber)
+                    store.registration(email, password, fio, phoneNumber, address)
                   }
                 >
                   Зарегистрироваться
