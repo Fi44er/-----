@@ -12,8 +12,14 @@ const LkUser = () => {
   // const profileMail = query.get("email")
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/getUser")
+      .get("http://localhost:5000/api/getUser", {
+        headers:{
+          Authorization: localStorage.getItem("token")
+        }
+      })
       .then((response) => {
+        console.log(response);
+        
         setUser(response.data);
       })
       .catch((e) => {
@@ -21,10 +27,11 @@ const LkUser = () => {
       });
   }, []);
   const { store } = useContext(Context)
+  
 
   // var cityId = user.find(val => val.email === profile).id; 
   // const profile = user.find(val => val.email === profileMail)
-  console.log(user);
+  // console.log(user);
   
   return (
     <main className="LkUser">
@@ -57,25 +64,19 @@ const LkUser = () => {
               <div className="userProfileInfoItem">
                 <h2>ФИО</h2>
                 <div className="userProfileInfoItemBlock">
-                  <p>111</p>
+                  <p>{user.fio}</p>
                 </div>
               </div>
               <div className="userProfileInfoItem">
                 <h2>Телефон</h2>
                 <div className="userProfileInfoItemBlock">
-                  <p>111</p>
+                  <p>{user.phone_number}</p>
                 </div>
               </div>
               <div className="userProfileInfoItem">
                 <h2>E-mail</h2>
                 <div className="userProfileInfoItemBlock">
-                  <p>111</p>
-                </div>
-              </div>
-              <div className="userProfileInfoItem">
-                <h2>Адрес</h2>
-                <div className="userProfileInfoItemBlock">
-                  <p>111</p>
+                  <p>{user.email}</p>
                 </div>
               </div>
               <div className="userProfileInfoItemLink">
