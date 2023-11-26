@@ -79,9 +79,9 @@ class UserService {
         return users[0]
     }
 
-    async infoByToken(token){
+    async infoByToken(refreshToken){
         const connect = await connection
-        const suspect = tokenService.validateAccessToken(token)
+        const suspect = tokenService.validateRefreshToken(refreshToken)
         console.log(suspect);
         if(suspect === null) {
             throw ApiError.BadRequest('Некорректный токен')
@@ -94,7 +94,6 @@ class UserService {
             throw ApiError.BadRequest('Пользователя не существует')
         }
         return user
-
     }
 
     //MUNICIPAL

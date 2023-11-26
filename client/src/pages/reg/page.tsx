@@ -68,15 +68,6 @@ const Reg = () => {
                     value={password}
                   />
                 </div>
-                <div className="input">
-                  <img src="/fio.svg" width={29} height={29} alt="" />
-                  <input
-                    type="text"
-                    placeholder="Адресс"
-                    // onChange={(e) => setEmail(e.target.value)}
-                    // value={email}
-                  />
-                </div>
                 <button
                   className="formButton"
                     onClick={() => store.registration(email, password, fio, phoneNumber)}

@@ -80,7 +80,14 @@ class UserController {
 
   async findUser(req, res, next) {
     try{
-      const token = req.headers.authorization
+      const { refreshToken } = req.cookies
+      console.log(refreshToken);
+      const token = await userService.infoByToken(refreshToken)
+      // console.log(token);
+      // const token = req.headers.authorization
+      // const token = localStorage.getItem('token')
+      // console.log(token);
+
       const user = await userService.infoByToken(token)
       return res.json(user)
     }catch (e) {
