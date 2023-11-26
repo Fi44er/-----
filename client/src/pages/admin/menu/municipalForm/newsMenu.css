@@ -1,0 +1,12 @@
+.editButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #023affcc;
+  width: 21rem;
+  height: 5rem;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2.25rem;
+}

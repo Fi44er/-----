@@ -2,6 +2,8 @@ import style from "../Admin.module.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { INews } from "../../../models/INews";
+import { Link } from "react-router-dom";
+import "./municipalForm/newsMenu.css";
 
 const NewsMenu = () => {
   const [news, setNews] = useState<INews[]>([]);
@@ -21,7 +23,9 @@ const NewsMenu = () => {
     <>
       <div>
         <div className={style.MunicipalMenuButton}>
-          <button className="mb-9">Добавить новость</button>
+          <Link to="/editnews" className="editButton">
+            Добавить новость
+          </Link>
         </div>
         <div className={style.getMunicipal}>
           <table className={style.table}>
