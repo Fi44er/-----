@@ -145,6 +145,17 @@ export default class Store {
         heading, text
       )
       this.setNews(response.data.news)
+      location.href='/admin'
+    } catch (e: any) {
+      this.setregMessage(e.response?.data?.message)
+    }
+  }
+
+  async delnews(id: number) {
+    try {
+      const response = await NewsService.delNews(id)
+      this.setNews(response.data.news)
+      location.href='/admin'
     } catch (e: any) {
       this.setregMessage(e.response?.data?.message)
     }

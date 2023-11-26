@@ -11,4 +11,8 @@ export default class NewsService {
     static async addNew(heading: string, text: string): Promise<AxiosResponse<NewResponse>> {
         return $api.post<NewResponse>('/addnews', {heading, text})
     }
+
+    static async delNews(id:number): Promise<AxiosResponse<NewResponse>> {
+        return $api.post<NewResponse>('/delnews', {id})
+    }
 }

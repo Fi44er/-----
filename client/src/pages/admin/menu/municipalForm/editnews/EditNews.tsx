@@ -3,10 +3,13 @@ import { Context } from "../../../../../main";
 import { useContext, useState } from "react";
 import { observer } from "mobx-react-lite";
 
-export default function EditNews() {
+
+const EditNews = () => {
   const [heading, setHeading] = useState<string>("");
   const [text, setText] = useState<string>("");
   const { store } = useContext(Context);
+
+
   return (
     <main className="edit">
       <div className="container">
@@ -29,14 +32,14 @@ export default function EditNews() {
                 <div className="input2">
                   <textarea
                     placeholder="Текст новости"
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    value={phoneNumber}
+                    onChange={(e) => setText(e.target.value)}
+                    value={text}
                   />
                 </div>
                 <button
                   className="formButton"
                   onClick={() =>
-                    store.registration(email, password, fio, phoneNumber)
+                    store.addnews(heading, text)
                   }
                 >
                   Добавить
@@ -49,3 +52,5 @@ export default function EditNews() {
     </main>
   );
 }
+
+export default observer(EditNews)

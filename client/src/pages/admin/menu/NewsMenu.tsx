@@ -1,9 +1,10 @@
 import style from "../Admin.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { INews } from "../../../models/INews";
 import { Link } from "react-router-dom";
 import "./municipalForm/newsMenu.css";
+import { Context } from "../../../main";
 
 const NewsMenu = () => {
   const [news, setNews] = useState<INews[]>([]);
@@ -19,6 +20,8 @@ const NewsMenu = () => {
   }, []);
 
   console.log(news[1]);
+  const { store } = useContext(Context);
+
   return (
     <>
       <div>
@@ -46,7 +49,9 @@ const NewsMenu = () => {
                     <a href="#">Редактировать</a>
                   </td>
                   <td>
-                    <a href="#">Удалить</a>
+                    <button onClick={() =>
+                    store.delnews(newsId.id)
+                  }>Удалить</button>
                   </td>
                 </tr>
               ))}
