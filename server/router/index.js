@@ -25,5 +25,7 @@ router.get('/getMunicipal', UserController.getMunicipal)
 
 // news
 router.get('/news', NewsController.getNews)
+router.post('/addnews', NewsController.addNews)
+router.post('/delnews', NewsController.delNews)
 
 module.exports = router

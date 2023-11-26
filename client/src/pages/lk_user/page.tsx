@@ -29,8 +29,6 @@ const LkUser = () => {
 
   const { store } = useContext(Context);
 
-  const { store } = useContext(Context);
-
   if (!localStorage.getItem("token")) {
     location.href = "/";
     return;

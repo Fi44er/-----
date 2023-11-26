@@ -6,10 +6,12 @@ import { AuthResponse } from "../models/response/AuthResponse"
 import { API_URL } from "../http"
 import { IMunicipal } from "../models/IMunicipal"
 import MunicipalService from "../services/MunicipalService"
+import { INews } from "../models/INews"
 
 export default class Store {
   municipal = {} as IMunicipal
   user = {} as IUser
+  news = {} as INews
   isAuth = false
   isLoading = false
   message = ""
@@ -28,6 +30,10 @@ export default class Store {
 
   setMunicipal(municipal: IMunicipal) {
     this.municipal = municipal
+  }
+
+  setNews(news: INews) {
+    this.news = news
   }
 
   setMessage(message: string) {
@@ -131,5 +137,24 @@ export default class Store {
       this.setMessage(e.response?.data?.message)
     }
   }
+
+  // async addnews(heading:string, text: string) {
+  //   try {
+  //     const response = await AuthServices.registration(
+  //       email,
+  //       password,
+  //       fio,
+  //       phoneNumber,
+  //       address
+  //     )
+  //     console.log(response)
+  //     localStorage.setItem("token", response.data.accessToken)
+  //     this.setAuth(true)
+  //     this.setUser(response.data.user)
+  //   } catch (e: any) {
+  //     // console.log(e.response?.data?.message)
+  //     this.setregMessage(e.response?.data?.message)
+  //   }
+  // }
 
 }
