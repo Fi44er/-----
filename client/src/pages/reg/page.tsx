@@ -55,7 +55,7 @@ const Reg = () => {
                 <div className="input">
                   <img src="/fio.svg" width={29} height={29} alt="" />
                   <input
-                    type="password"
+                    type="text"
                     placeholder="Адрес"
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
